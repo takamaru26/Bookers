@@ -1,11 +1,32 @@
 
 <h1>Books</h1>
-
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+    
+  </thead>
+  <tbody>
 <% @books.each do |book| %>
-
-  <p>タイトル</p>
+  
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.body %></td>
+    <td><a class="show_168079" href="books/168079">Show</a>
+    </td>
+    <td><a class="edit_168079" href="books/168079/edit">Edit</a>
+    </td>
+    <td><a date-confir="Are you sure?" class="destroy_168079" rel="nofollow" date-method="delete" href="/books/168079">Destroy</a>
+      
+    </td>
+  </tr>
+  </tbody>
+  
 
 <% end %>
+</table>
 
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
