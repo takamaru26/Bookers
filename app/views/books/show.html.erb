@@ -10,6 +10,6 @@
 <%= @book.body %>
 </p>
 
-<a><%= link_to "Edit", "/books/#{@book.id}/edit"%></a>
+<%= link_to "Edit", edit_book_path %>
 |
-<a class="back" href="/books">Back</a>
+<%= link_to "Back", books_path %>

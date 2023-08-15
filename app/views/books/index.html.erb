@@ -57,7 +57,9 @@
   </div>
   <div class="field_with_errors">
     <textarea class="book_body" name="book[Book]" id="book_body"></textarea>
+  </div>
 </div>
+
 <% else %>
 
 <%= f.label :Title %>
@@ -66,8 +68,8 @@
 
 <%= f.label :Body %>
 <%= f.text_area :body %>
-<% end %>
 
+<% end %>
 <br>
 
 <%= f.submit 'Create Book' %>
